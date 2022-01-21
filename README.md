@@ -1,18 +1,25 @@
-Geçen hafta veri tabanı üzerinde Modelleri projemize çekmiştik. 
-2 Adet Model için Interface ve Dal katmanını tasarlamıştık. Aynı zamanda Automapper yapısında Model-Dto eşlemesi yapmıştık. 
+Bu sisteme kullanıcının kendisinin kayıt olduğunu düşünerek;
+
+Kullanıcı kayıt işlemlerini gerçekleştiren metod(ları) yazınız.
+
+Kullanıcı kayıt işlemlerini; kullanıcı kayıt sırasında girdiği paralanın veri tabanına şifreli olarak kayıt olacak şekilde tasarlayınız.. 
  
-# ÖDEV: 
+# MD5,SHA1,MD5 (SHA1),SHA1 (MD5) algoritmalarını tercih edebilirsiniz. 
  
-#### Veri tabanında çekilen tüm modellerin; 
-- 1-Interface katmanının tasarlanması 
-- 2-Dal katmanında Abstract ve Concrete yapılarının tasarlanması 
-- 3-AutoMapper yapısında Model-Dto dönümü yapısının kurulması. 
- 
-### AMAÇ: 
-- 1.Katmanlar arası bağlantıyı pekiştirme 
-- 2.Yeni öğrenilen kavramların içselleştirilmesi 
-- 3.Mimari içerisinde yapıları kurmayı öğrenme 
-- 4.OOP kurallarının kullanışını pekiştirme 
- 
-### SONUÇ: 
-Haftaya aynı projeden devam edeceğimiz için ödev maddelerinin yapılması önem arzetmektedir. Diğer konuları da aynı projeye inşaa edeceğiz.
+#### Eklenen MD5 ŞİFRELEME Metodu
+```cs
+  using (MD5 md5 = MD5.Create())
+            {
+                byte[] inputBytes = Encoding.ASCII.GetBytes(text);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                // Convert the byte array to hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
+```
+
