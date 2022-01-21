@@ -22,7 +22,7 @@ Kullanıcı kayıt işlemlerini; kullanıcı kayıt sırasında girdiği paralan
                 return sb.ToString();
             }
 ```
-Veritabanına md5 ile şiflenmiş biçimde kaydedildi.
+Veritabanına md5 ile şifrelenmiş biçimde kaydedildi.
 ![md5](https://user-images.githubusercontent.com/67828030/150515313-2c6fcadc-9516-49d6-a6f8-a604896f03f4.PNG)
 
 #### Ek olarak
