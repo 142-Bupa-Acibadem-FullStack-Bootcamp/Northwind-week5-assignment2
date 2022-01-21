@@ -53,5 +53,5 @@ CustomerManager örnek
         }
 ```
 #### 2. Ek olarak 
-lazyLoading yapısı kaldırıldı. Customer GetInclude(string str) yapısına get isteği yapıdlığı zaman customer ile birlikte order 'ları gelmesi sağlandı
+lazyLoading yapısı kaldırıldı. Customer'a Get isteği yapıdlığı zaman customer ile birlikte order 'ları gelmesi sağlandı
 ![customer](https://user-images.githubusercontent.com/67828030/150514428-5905765b-9bcd-4107-8011-277b45e04a17.PNG)
